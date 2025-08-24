@@ -1,0 +1,126 @@
+.box {
+  flex: 0 1 23%;
+  max-width: 23%;
+  padding: 20px;
+  background-color: #1e1e1e; /* Preto suave */
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.separador {
+  width: 100%;
+}
+
+h1, h2, h3, h4 {
+  margin: 10px 0;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+p {
+  font-size: 1rem;
+  color: #cccccc;
+  margin: 5px 0;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #121212;
+  color: #ffffff;
+  width: 100%;
+  max-width: 20rem;
+  margin: 10px 0;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Inputs auto-ajustáveis */
+.inputAuto {
+  width: auto;
+  min-width: 5ch;
+  padding: 0.3rem;
+  font-size: 1rem;
+  box-sizing: content-box;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+select {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #121212;
+  color: #ffffff;
+  width: 100%;
+  max-width: 20rem;
+  margin: 10px 0;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+select:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #cccccc;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  background-color: #2b2b2b;
+  padding: 2rem;
+}
