@@ -10,15 +10,20 @@ function App() {
   })
   const [novoItem, setNovoItem] = useState('')
 
-  // Skills extras
-  const [skills, setSkills] = useState([])
-  const [novaSkill, setNovaSkill] = useState('')
+const [skills, setSkills] = useState(() => {
+  const saved = localStorage.getItem('skills')
+  return saved ? JSON.parse(saved) : []
+})
+const [novaSkill, setNovaSkill] = useState('')
 
   // Salvar inventário no localStorage sempre que mudar
   useEffect(() => {
     localStorage.setItem('inventario', JSON.stringify(inventario))
   }, [inventario])
 
+useEffect(() => {
+  localStorage.setItem('skills', JSON.stringify(skills))
+}, [skills])
   // Funções
   const adicionarItem = () => {
     if (novoItem.trim() === '') return
